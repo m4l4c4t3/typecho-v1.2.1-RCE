@@ -1,7 +1,7 @@
 # typecho-v1.2.1-RCE
 typecho-v1.2.1-RCE
 
-##Vulnerability to reproduce
+## Vulnerability to reproduce
 Log in to the backend of the website. Locate the /admin/options-general.php file and add 'php.' to the '其他格式' section at the bottom. Then click on '保存设置'.
 
 ```php
@@ -86,5 +86,5 @@ The requested URL is 'http://127.0.0.1/typecho/usr/uploads/2023/06/3042336957.ph
 
 ![web](./typecho-V1.2.1_rce_03.png)
 
-##Vulnerability Analysis
+## Vulnerability Analysis
 The website filtered extensions such as php, php5, php3, etc., but forgot about php. It can still be parsed successfully on Windows.
