@@ -1,8 +1,8 @@
-# typecho-v1.2.1-RCE
+# Typecho-v1.2.1-RCE
 typecho-v1.2.1-RCE
 
 ## Vulnerability to reproduce
-Log in to the backend of the website. Locate the /admin/options-general.php file and add 'php.' to the '其他格式' section at the bottom. Then click on '保存设置'.
+Log in to the backend of the website. Locate the /admin/options-general.php file and add 'php.' to the '其他格式' `otros formatos` section at the bottom. Then click on '保存设置' `Guardar Ajustes` 
 
 ```php
 POST /typecho/index.php/action/options-general?_=7f7f3849a454840627316bb52364d2fc HTTP/1.1
@@ -28,7 +28,7 @@ title=Hello+World&siteUrl=http%3A%2F%2F127.0.0.1%2Ftypecho&description=Your+desc
 
 ![web](./typecho-V1.2.1_rce_01.png)
 
-Visit the URL 'http://127.0.0.1/typecho/admin/write-post.php'. This is based on the current directory where I have set up. The actual directory is 'admin/write-post.php'. After entering, click on the '附件' button on the right side, and then click the highlighted button '选择文件上传'. Upload a random PHP file here and the system will not block it. After successful upload, the file can still be executed and the PHP address will be returned.
+Visit the URL 'http://127.0.0.1/typecho/admin/write-post.php'. This is based on the current directory where I have set up. The actual directory is 'admin/write-post.php'. After entering, click on the '附件' `apéndice` button on the right side, and then click the highlighted button '选择文件上传' `seleccionar carga de archivo`. Upload a random PHP file here and the system will not block it. After successful upload, the file can still be executed and the PHP address will be returned.
 
 ![web](./typecho-V1.2.1_rce_02.png)
 
